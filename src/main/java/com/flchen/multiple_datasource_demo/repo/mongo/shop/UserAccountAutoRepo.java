@@ -1,4 +1,4 @@
-package com.flchen.multiple_datasource_demo.dao.mongo.shop;
+package com.flchen.multiple_datasource_demo.repo.mongo.shop;
 
 import com.flchen.multiple_datasource_demo.entity.shop.account.entity.UserAccountDO;
 import org.springframework.data.mongodb.repository.MongoRepository;

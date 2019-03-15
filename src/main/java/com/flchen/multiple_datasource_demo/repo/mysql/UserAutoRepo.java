@@ -1,4 +1,4 @@
-package com.flchen.multiple_datasource_demo.dao.mysql;
+package com.flchen.multiple_datasource_demo.repo.mysql;
 
 import com.flchen.multiple_datasource_demo.entity.UserDO;
 import org.springframework.data.jpa.repository.JpaRepository;

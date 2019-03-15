@@ -1,0 +1,29 @@
+<com.flchen.multiple__datasource__demo.commom.entity.BaseFileDO>
+  <enable>true</enable>
+  <createdTime>0</createdTime>
+  <updatedTime>0</updatedTime>
+  <deletedTime>0</deletedTime>
+  <fileName>用户登陆接口</fileName>
+  <url>http://192.168.96.38:8081/fbd/app/user/login</url>
+  <method>POST</method>
+  <wantCheckProperties>
+    <string>userId</string>
+    <string>mobile</string>
+    <string>token</string>
+  </wantCheckProperties>
+  <inData class="com.flchen.multiple_datasource_demo.client.fbdClient.bo.request.FbdUserLoginReqBO">
+    <mobile>13112340001</mobile>
+    <password>e10adc3949ba59abbe56e057f20f883e</password>
+  </inData>
+  <outData class="com.flchen.multiple_datasource_demo.client.fbdClient.bo.response.FbdUseLoginRespBO">
+    <isPayPassword>false</isPayPassword>
+    <isPassword>true</isPassword>
+    <token>eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcHAiLCJzdWIiOiI3MzIyMzRiODE1ZmE0MjFmOWFmMWQ0ZjFlZTE4ZmE0ZSIsIm1vYiI6IjEzMTEyMzQwMDAxIiwiZXhwIjoxNTUzMTU1MTA5fQ.QSPXyBCGZahi8WTveVWNNPg0o1HAVyE4Mj2ruKAblXc</token>
+    <shopToken>eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhcHBfc2hvcCIsInN1YiI6IjczMjIzNGI4MTVmYTQyMWY5YWYxZDRmMWVlMThmYTRlIiwibW9iIjoiMTMxMTIzNDAwMDEiLCJleHAiOjE1NTMxNTUxMDl9.yUuZ3Az8D9U2--1nwqp7dfXEFcbMjahLaTppQbuOKMQ</shopToken>
+    <userId>732234b815fa421f9af1d4f1ee18fa4e</userId>
+    <mobile>13112340001</mobile>
+    <payScanState>0</payScanState>
+    <isFaceVerify>false</isFaceVerify>
+    <applyStatus>0</applyStatus>
+  </outData>
+</com.flchen.multiple__datasource__demo.commom.entity.BaseFileDO>

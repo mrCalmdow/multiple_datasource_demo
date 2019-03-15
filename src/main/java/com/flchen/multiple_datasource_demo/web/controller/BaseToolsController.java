@@ -2,7 +2,7 @@ package com.flchen.multiple_datasource_demo.web.controller;
 
 import com.flchen.multiple_datasource_demo.commom.mo.ResponseMO;
 import com.flchen.multiple_datasource_demo.commom.web.controller.BaseController;
-import com.flchen.multiple_datasource_demo.dao.mongo.shop.UserAccountAutoRepo;
+import com.flchen.multiple_datasource_demo.repo.mongo.shop.UserAccountAutoRepo;
 import com.flchen.multiple_datasource_demo.entity.shop.account.entity.UserAccountDO;
 import com.flchen.multiple_datasource_demo.web.mo.shop.mo.UserAccountInfoMO;
 import lombok.extern.slf4j.Slf4j;

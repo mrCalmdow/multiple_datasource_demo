@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: multipleDatasource
@@ -35,3 +36,6 @@ spring:
       port: 27018
 fbd-shop-app:
   url: http://uatscbackend.fujfu.com
+server:
+  port: 8080
+  address: 192.168.96.38
