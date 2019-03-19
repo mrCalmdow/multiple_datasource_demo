@@ -29,6 +29,22 @@ public interface RestTemplateExtensionService {
             throws RestTemplateExtensionException;
 
     /**
+     *
+     * @param api
+     * @param method
+     * @param requestBody
+     * @param returnType
+     * @param customHeaders
+     * @param uriVariables
+     * @param <T>
+     * @param <V>
+     * @return
+     * @throws RestTemplateExtensionException
+     */
+    <T, V> T exchange(String api, HttpMethod method, V requestBody, Class<T> returnType, Map<String, String> customHeaders, Object... uriVariables)
+            throws RestTemplateExtensionException;
+
+    /**
      * 增强RestTemplate用于HTTP请求交互
      * @param api 请求的API地址
      * @param method 请求方式,如Get\Post等

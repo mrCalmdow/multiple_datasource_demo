@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.*;
 import org.springframework.stereotype.Service;
+import org.springframework.util.CollectionUtils;
 import org.springframework.web.client.RestTemplate;
 
 import java.lang.reflect.ParameterizedType;
@@ -28,10 +29,21 @@ public class RestTemplateExtensionServiceImpl implements RestTemplateExtensionSe
 
     @Override
     public <T, V> T exchange(String api, HttpMethod method, V requestBody, Class<T> returnType, Object... uriVariables) throws RestTemplateExtensionException {
+        return exchange(api, method, requestBody, returnType, null, uriVariables);
+    }
+
+    @Override
+    public <T, V> T exchange(String api, HttpMethod method, V requestBody, Class<T> returnType, Map<String, String> customHeaders, Object... uriVariables) throws RestTemplateExtensionException {
         HttpHeaders headers = new HttpHeaders();
         MediaType type = MediaType.parseMediaType("application/json; charset=UTF-8");
         headers.setContentType(type);
         headers.add("Accept", MediaType.APPLICATION_JSON.toString());
+
+        if (!CollectionUtils.isEmpty(customHeaders)) {
+            for (Map.Entry<String, String> entry : customHeaders.entrySet()) {
+                headers.add(entry.getKey(), entry.getValue());
+            }
+        }
         HttpEntity<V> requestEntity = new HttpEntity<>(requestBody, headers);
 
         ParameterizedTypeReference<ResponseMO<T>> typeRef = new ParameterizedTypeReference<ResponseMO<T>>() {
